@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 190 100% 95%;
+    --foreground: 190 5% 0%;
+    --card: 190 50% 90%;
+    --card-foreground: 190 5% 10%;
+    --popover: 190 100% 95%;
+    --popover-foreground: 190 100% 0%;
+    --primary: 190 69% 85%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 190 30% 70%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 152 30% 85%;
+    --muted-foreground: 190 5% 35%;
+    --accent: 152 30% 80%;
+    --accent-foreground: 190 5% 10%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 190 5% 90%;
+    --border: 190 30% 50%;
+    --input: 190 30% 18%;
+    --ring: 190 69% 85%;
+    --radius: 0.5rem;
+    --font-sora: "Sora", sans-serif;
+    --font-code: "Source Code Pro", monospace;
+    --font-grotesk: "Space Grotesk", sans-serif;
+    color-scheme: dark;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --ring: 224.3 76.3% 48%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sora);
+  }
+}
+
+@layer utilities {
+  .font-sora {
+    font-family: var(--font-sora);
+  }
+  .font-code {
+    font-family: var(--font-code);
+  }
+  .font-grotesk {
+    font-family: var(--font-grotesk);
+  }
+}
