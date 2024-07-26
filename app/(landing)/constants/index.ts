@@ -1,3 +1,4 @@
+import type { StaticImageData } from 'next/image';
 import {
   benefitIcon1,
   benefitIcon2,
@@ -48,7 +49,7 @@ interface NavigationItem {
 interface IconItem {
   id: string;
   title: string;
-  icon: string;
+  icon: StaticImageData;
   width: number;
   height: number;
 }
@@ -59,7 +60,7 @@ interface RoadmapItem {
   text: string;
   date: string;
   status: "done" | "progress";
-  imageUrl: string;
+  imageUrl: StaticImageData;
   colorful?: boolean;
 }
 
@@ -82,15 +83,15 @@ interface BenefitItem {
   title: string;
   text: string;
   backgroundUrl: string;
-  iconUrl: string;
-  imageUrl: string;
+  iconUrl: StaticImageData;
+  imageUrl: StaticImageData;
   light?: boolean;
 }
 
 interface SocialItem {
   id: string;
   title: string;
-  iconUrl: string;
+  iconUrl: StaticImageData;
   url: string;
 }
 
@@ -110,11 +111,11 @@ export const navigation: NavigationItem[] = [
   },
 ];
 
-export const heroIcons: string[] = [homeSmile, file02, searchMd, plusSquare];
+export const heroIcons: StaticImageData[] = [homeSmile, file02, searchMd, plusSquare];
 
-export const notificationImages: string[] = [notification4, notification3, notification2];
+export const notificationImages: StaticImageData[] = [notification4, notification3, notification2];
 
-export const companyLogos: string[] = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
+export const companyLogos: StaticImageData[] = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
 export const brainwaveServices: string[] = [
   "Photo generating",
@@ -122,7 +123,7 @@ export const brainwaveServices: string[] = [
   "Seamless Integration",
 ];
 
-export const brainwaveServicesIcons: string[] = [
+export const brainwaveServicesIcons: StaticImageData[] = [
   recording03,
   recording01,
   disc02,
@@ -139,6 +140,7 @@ export const roadmap: RoadmapItem[] = [
     status: "done",
     imageUrl: roadmap1,
     colorful: true,
+    date: ''
   },
   {
     id: "1",
@@ -230,7 +232,7 @@ export const collabApps: IconItem[] = [
   {
     id: "6",
     title: "Framer",
-    icon: "framer",
+    icon: framer,
     width: 26,
     height: 34,
   },
@@ -288,48 +290,48 @@ export const benefits: BenefitItem[] = [
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
-  {
-    id: "1",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
-    backgroundUrl: "./src/assets/benefits/card-2.svg",
-    iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
-    light: true,
-  },
-  {
-    id: "2",
-    title: "Connect everywhere",
-    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
-    backgroundUrl: "./src/assets/benefits/card-3.svg",
-    iconUrl: benefitIcon3,
-    imageUrl: benefitImage2,
-  },
-  {
-    id: "3",
-    title: "Fast responding",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
-    backgroundUrl: "./src/assets/benefits/card-4.svg",
-    iconUrl: benefitIcon4,
-    imageUrl: "benefitImage2",
-    light: true,
-  },
-  {
-    id: "4",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
-    backgroundUrl: "./src/assets/benefits/card-5.svg",
-    iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
-  },
-  {
-    id: "5",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
-    backgroundUrl: "./src/assets/benefits/card-6.svg",
-    iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
-  },
+  // {
+  //   id: "1",
+  //   title: "Improve everyday",
+  //   text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+  //   backgroundUrl: "./src/assets/benefits/card-2.svg",
+  //   iconUrl: benefitIcon2,
+  //   imageUrl: benefitImage2,
+  //   light: true,
+  // },
+  // {
+  //   id: "2",
+  //   title: "Connect everywhere",
+  //   text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+  //   backgroundUrl: "./src/assets/benefits/card-3.svg",
+  //   iconUrl: benefitIcon3,
+  //   imageUrl: benefitImage2,
+  // },
+  // {
+  //   id: "3",
+  //   title: "Fast responding",
+  //   text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+  //   backgroundUrl: "./src/assets/benefits/card-4.svg",
+  //   iconUrl: benefitIcon4,
+  //   imageUrl: "benefitImage2",
+  //   light: true,
+  // },
+  // {
+  //   id: "4",
+  //   title: "Ask anything",
+  //   text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+  //   backgroundUrl: "./src/assets/benefits/card-5.svg",
+  //   iconUrl: benefitIcon1,
+  //   imageUrl: benefitImage2,
+  // },
+  // {
+  //   id: "5",
+  //   title: "Improve everyday",
+  //   text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+  //   backgroundUrl: "./src/assets/benefits/card-6.svg",
+  //   iconUrl: benefitIcon2,
+  //   imageUrl: benefitImage2,
+  // },
 ];
 
 export const socials: SocialItem[] = [

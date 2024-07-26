@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(landing)/assets/index.js", "app/(landing)/assets/index.js", "app/(landing)/constants/index.js", "app/(landing)/_components/Roadmap.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(landing)/assets/index.js", "app/(landing)/assets/index.js", "app/(landing)/constants/index.ts", "app/(landing)/_components/Roadmap.jsx"],
   "exclude": ["node_modules"]
 }
