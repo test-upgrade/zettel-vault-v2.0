@@ -4,11 +4,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme";
 import { ConvexClientProvider } from "@/components/providers/convex-provider";
-import { Yatra_One } from "next/font/google";
+import { Roboto } from "next/font/google";
 import { EdgeStoreProvider } from "@/lib/edgestore";
 import { ModalProvider } from "@/components/providers/model-provider";
 
-const font = Yatra_One({
+const font = Roboto({
     weight: '400',
     subsets: ['latin']
 });
